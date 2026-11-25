@@ -49,7 +49,7 @@ Abra `index.html` no navegador ou utilize um servidor HTTP estático local. Não
 
 ## Ecosystem
 
-- **Project Genesis** — learning and scientific foundations / formação e conhecimento.
+- **Project Genesis** — independent studies and knowledge sharing / estudos independentes e compartilhamento de conhecimento.
 - **Project Vision** — research and engineering / pesquisa e engenharia.
 - **Project Aeris** — useful, lightweight software / aplicações leves e úteis.
 
