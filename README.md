@@ -2,11 +2,12 @@
 
 # Project Vision
 
-**Independent AI research and engineering · by K&G Vision**
+**Beyond Boundaries · Além das fronteiras.**  
+*Independent AI research and engineering · by K&G Vision*
 
 Integrate · Secure · Validate · Optimize
 
-[Project website](https://kgasil.github.io/vision/) (requires GitHub Pages deployment) · [Português](#português) · [English](#english)
+[Project website](https://kgasil.github.io/vision/) · [Português](#português) · [English](#english)
 
 ## English
 
@@ -25,7 +26,7 @@ Project Vision is the research and engineering branch of K&G Vision, an independ
 
 The laboratory also includes an integrated enterprise simulation, Intelligence Studio, Trust Center, Research Center and Knowledge Center.
 
-**Current baseline:** V10.2 Launch Quality Edition, migrated to the Project Vision identity. The previous release documented 101 internal checks. This migration preserves the original JavaScript and internal navigation targets; browser regression tests have not been rerun.
+**Current baseline:** V10.2 Launch Quality Edition, migrated to the Project Vision identity. The previous release documented 101 internal checks. The technical baseline was migrated to the current identity. Subsequent changes include ecosystem navigation and descriptive text. The 101 checks belong to the earlier revision; current browser regression tests have not been rerun.
 
 All current demonstrations run locally in the browser using synthetic or user-supplied inputs. They are educational prototypes, not production security products, live provider integrations or independent audits. Do not submit sensitive real-world data.
 
@@ -47,11 +48,16 @@ Os recursos atuais são protótipos educacionais, não serviços empresariais em
 
 Abra `index.html` no navegador ou utilize um servidor HTTP estático local. Não é necessário compilar.
 
-## Ecosystem
+## Ecosystem / Ecossistema
 
-- **Project Genesis** — independent studies and knowledge sharing / estudos independentes e compartilhamento de conhecimento.
-- **Project Vision** — research and engineering / pesquisa e engenharia.
-- **Project Aeris** — useful, lightweight software / aplicações leves e úteis.
+| Project | Website | Repository | Current stage / Etapa atual |
+| --- | --- | --- | --- |
+| K&G Vision | [Institutional](https://kgasil.github.io/) | [Source](https://github.com/Kgasil/kgasil.github.io) | Independent initiative / Iniciativa independente |
+| Project Genesis | [O Princípio](https://kgasil.github.io/genesis/) | [Source](https://github.com/Kgasil/genesis) | Independent studies; 10 review guides planned, none published / Estudos independentes; 10 guias previstos, nenhum publicado |
+| Project Vision | [Beyond Boundaries](https://kgasil.github.io/vision/) | [Source](https://github.com/Kgasil/vision) | Local demonstration lab / Laboratório demonstrativo local |
+| Project Aeris | [Naturally / Naturalmente](https://kgasil.github.io/aeris/) | [Source](https://github.com/Kgasil/aeris) | Product concept; no downloadable release / Conceito de produto; sem versão para download |
+
+**Learn · Build · Simplify / Aprender · Construir · Simplificar**
 
 ## Repository
 
