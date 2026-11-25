@@ -1,2 +1,63 @@
-# vision
-Project Vision | Independent AI research and engineering. Integration, Security, Assurance, Governance &amp; Performance. By K&amp;G Vision.
+<p align="center"><a href="https://kgasil.github.io/vision/"><img src="assets/brand-banner.svg" alt="Project Vision — Beyond Boundaries" width="100%"></a></p>
+
+# Project Vision
+
+**Independent AI research and engineering · by K&G Vision**
+
+Integrate · Secure · Validate · Optimize
+
+[Project website](https://kgasil.github.io/vision/) (requires GitHub Pages deployment) · [Português](#português) · [English](#english)
+
+## English
+
+Project Vision is the research and engineering branch of K&G Vision, an independent technology initiative. We explore vendor-neutral AI integration, security, assurance, governance and performance.
+
+### Technology laboratory
+
+| Engine | Demonstration |
+| --- | --- |
+| K&G AI Shield | Sensitive-data masking and heuristic security indicators |
+| K&G AI Gateway | Simulated model-profile selection |
+| K&G AI Assurance | Structured comparison against supplied references |
+| K&G AI Performance | Illustrative cost, latency and caching estimates |
+| K&G AI Sentinel | Synthetic telemetry and security signals |
+| K&G AI Connect | Integration design, permissions and controls |
+
+The laboratory also includes an integrated enterprise simulation, Intelligence Studio, Trust Center, Research Center and Knowledge Center.
+
+**Current baseline:** V10.2 Launch Quality Edition, migrated to the Project Vision identity. The previous release documented 101 internal checks. This migration preserves the original JavaScript and internal navigation targets; browser regression tests have not been rerun.
+
+All current demonstrations run locally in the browser using synthetic or user-supplied inputs. They are educational prototypes, not production security products, live provider integrations or independent audits. Do not submit sensitive real-world data.
+
+### Run locally
+
+Open `index.html` in a browser, or serve the repository root with a local static HTTP server. No build step is required.
+
+## Português
+
+O Project Vision é a frente de pesquisa e engenharia da K&G Vision, uma iniciativa tecnológica independente. Nosso foco é integração de IA, segurança, avaliação, governança e desempenho, sem dependência de um único fornecedor.
+
+O laboratório reúne seis motores demonstrativos, onze demonstrações locais, guias técnicos, pesquisas, uma plataforma integrada, Trust Center e Intelligence Studio.
+
+A base V10.2 foi preservada durante a migração de identidade. As 101 verificações internas pertencem à revisão anterior; os testes de regressão no navegador ainda precisam ser reexecutados nesta versão.
+
+Os recursos atuais são protótipos educacionais, não serviços empresariais em produção. Não insira informações sensíveis reais.
+
+### Executar localmente
+
+Abra `index.html` no navegador ou utilize um servidor HTTP estático local. Não é necessário compilar.
+
+## Ecosystem
+
+- **Project Genesis** — learning and scientific foundations / formação e conhecimento.
+- **Project Vision** — research and engineering / pesquisa e engenharia.
+- **Project Aeris** — useful, lightweight software / aplicações leves e úteis.
+
+## Repository
+
+- `index.html` — bilingual static website and demonstration engines.
+- `assets/brand-banner.svg` — project brand banner.
+
+License: not yet specified. Public visibility does not grant permission to reuse or redistribute code.
+
+Contact: [LinkedIn](https://www.linkedin.com/in/kaio-gabriel-da-silva) · [GitHub](https://github.com/Kgasil)
