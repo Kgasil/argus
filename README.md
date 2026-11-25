@@ -1,4 +1,4 @@
-<p align="center"><a href="https://kgasil.github.io/vision/"><img src="assets/brand-banner.svg" alt="Project Vision — Security & Efficiency" width="100%"></a></p>
+<p align="center"><a href="https://kgasil.github.io/vision/"><img src="assets/readme-cover.svg" alt="Project Vision — official project identity" width="760"></a></p>
 
 # Project Vision
 
@@ -73,7 +73,7 @@ Contact: [LinkedIn](https://www.linkedin.com/in/kaio-gabriel-da-silva) · [GitHu
 
 ## Identidade K&G Vision / K&G Vision identity
 
-[![K&G Vision — stacked wordmark, four-project identity](https://raw.githubusercontent.com/Kgasil/kgasil.github.io/main/assets/brand-banner.svg)](https://kgasil.github.io/)
+<p align="center"><a href="https://kgasil.github.io/"><img src="https://raw.githubusercontent.com/Kgasil/kgasil.github.io/main/assets/brand-banner.svg" alt="K&amp;G Vision — institutional identity" width="420"></a></p>
 
 [Versão vertical / Vertical lockup](https://github.com/Kgasil/kgasil.github.io/blob/main/assets/brand-stacked.svg) · [Escudo / Shield](https://github.com/Kgasil/kgasil.github.io/blob/main/assets/kg-symbol.svg)
 
