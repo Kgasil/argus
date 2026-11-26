@@ -83,7 +83,7 @@ Os recursos atuais são protótipos educacionais, não serviços empresariais em
 
 Abra `index.html` no navegador ou utilize um servidor HTTP estático local. Não é necessário compilar.
 
-## Ecosystem / Ecossistema — Marco 1.0
+## GRAAL — Ecosystem / Ecossistema · Marco 01
 
 | Project | Website | Repository | Current stage / Etapa atual |
 | --- | --- | --- | --- |
