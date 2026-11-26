@@ -1,8 +1,8 @@
-<p align="center"><a href="https://kgasil.github.io/vision/"><img src="assets/readme-cover.svg" alt="Project Argus — official project identity" width="760"></a></p>
+<p align="center"><a href="https://kgasil.github.io/argus/"><img src="assets/readme-cover.svg" alt="Project Argus — official project identity" width="760"></a></p>
 
 # Project Argus
 
-> Formerly Project Vision / Anteriormente Project Vision. The public identity is now Argus; the legacy repository and website paths are retained to preserve existing links. / A identidade pública agora é Argus; os endereços históricos do repositório e do site permanecem para preservar os links existentes.
+> Formerly Project Vision / Anteriormente Project Vision. The public identity and canonical repository are now Argus. / A identidade pública e o repositório canônico agora são Argus.
 
 **Security and Development · Segurança e Desenvolvimento.**  
 *Independent AI research and engineering · by K&G Vision*
@@ -11,7 +11,7 @@
 
 Integrate · Secure · Validate · Optimize
 
-[Project website](https://kgasil.github.io/vision/) · [Português](#português) · [English](#english)
+[Project website](https://kgasil.github.io/argus/) · [Português](#português) · [English](#english)
 
 > **Marco 1.0 — Laboratório público de pesquisa / Public research lab.** Base técnica V10.2 Launch Quality Edition preservada; demonstrações locais de integração, segurança, avaliação e desempenho de IA. Não é uma versão de produção nem certificação independente.
 
@@ -60,7 +60,7 @@ Abra `index.html` no navegador ou utilize um servidor HTTP estático local. Não
 | --- | --- | --- | --- |
 | K&G Vision | [Institutional](https://kgasil.github.io/) | [Source](https://github.com/Kgasil/kgasil.github.io) | Independent initiative / Iniciativa independente |
 | Project Genesis | [Wisdom & Application / Sabedoria e Aplicação](https://kgasil.github.io/genesis/) | [Source](https://github.com/Kgasil/genesis) | **1.0 — Editorial & Library / Acervo e biblioteca.** 75 private study PDFs; [public interactive library](https://kgasil.github.io/genesis/biblioteca.html) / 75 PDFs privados; biblioteca pública interativa, sem cursos ou certificados. |
-| Project Argus | [Security & Development / Segurança e Desenvolvimento](https://kgasil.github.io/vision/) | [Source](https://github.com/Kgasil/vision) | **1.0 — Public Research Lab / Laboratório público.** Technical baseline V10.2; local demonstrations / Base técnica V10.2; demonstrações locais, não serviços de produção. |
+| Project Argus | [Security & Development / Segurança e Desenvolvimento](https://kgasil.github.io/argus/) | [Source](https://github.com/Kgasil/argus) | **1.0 — Public Research Lab / Laboratório público.** Technical baseline V10.2; local demonstrations / Base técnica V10.2; demonstrações locais, não serviços de produção. |
 | Project Aeris | [Discreet & Efficient / Discreto e Eficiente](https://kgasil.github.io/aeris/) | [Source](https://github.com/Kgasil/aeris) | **1.0 — Extension 1.0.0.** [Manual installation / Instalação manual](https://github.com/Kgasil/aeris/tree/main/extension); Desktop 1.0.0rc1 remains a preview / permanece em prévia. |
 | Project Lilium | [Strategy & Growth / Estratégia e Crescimento](https://kgasil.github.io/lilium/) | [Source](https://github.com/Kgasil/lilium) | **1.0 — Web Lab.** Public demo / demonstração pública; Desktop v0.14.0 controlled preview / prévia controlada; [Mini v0.1.1](https://github.com/Kgasil/lilium/tree/main/extension) experimental. |
 
