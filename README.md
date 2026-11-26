@@ -28,6 +28,20 @@ Free complementary 0.1.0 samples for visitors to explore basic features. They do
 
 **Validation / Validação:** 23 deterministic rule checks in `tests/mini.test.js`; run `node tests/mini.test.js`. [CI workflow](https://github.com/Kgasil/argus/actions/workflows/mini-validation.yml).
 
+### Instalação da extensão / Extension installation
+
+[**Baixar Argus Mini v0.1.0 (.zip)**](https://github.com/Kgasil/argus/raw/refs/heads/main/downloads/Argus-Mini-v0.1.0-install.zip) · [Tutorial no site / Website guide](https://kgasil.github.io/argus/#instalar-extensao) · [Código-fonte](extension/README.md)
+
+1. Baixe o [ZIP de instalação v0.1.0](https://github.com/Kgasil/argus/raw/refs/heads/main/downloads/Argus-Mini-v0.1.0-install.zip) e extraia em uma pasta permanente.
+2. No Chrome, abra `chrome://extensions/`; no Edge, `edge://extensions/`.
+3. Ative o modo desenvolvedor, se permitido, e clique em **Carregar sem compactação** (Load unpacked).
+4. Selecione a pasta extraída que contém diretamente `manifest.json` (não o ZIP).
+5. Abra Argus Mini no menu de extensões; fixe o ícone se desejar. Clique em Exemplo fictício e teste Privacidade ou Revisão de prompt.
+
+Para atualizar, extraia a nova versão na mesma pasta e clique em Recarregar no gerenciador de extensões. Para remover, clique em Remover. Não contorne políticas administrativas. Validação manual ainda pendente; não disponível nas lojas.
+
+**English:** Extract the installation ZIP. Open `chrome://extensions/` or `edge://extensions/`, enable Developer mode where permitted, select Load unpacked, then select the folder containing manifest.json. Open Argus Mini and try the synthetic example. Reload after replacing files to update; Remove to uninstall. Manual browser acceptance pending; not in stores.
+
 ## English
 
 Project Argus is the applied AI research and engineering branch of K&G Vision. Our ambition is to make AI integration more secure, reliable and efficient through vendor-neutral research into cybersecurity, assurance, governance and performance. Explore the local laboratory to understand, test and challenge engineering concepts.
