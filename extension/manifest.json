@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Argus Mini",
+  "version": "0.1.0",
+  "description": "Revisão local de textos e prompts com regras demonstrativas. Sem permissões especiais.",
+  "action": {
+    "default_title": "Argus Mini",
+    "default_popup": "popup.html"
+  }
+}
