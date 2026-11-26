@@ -15,6 +15,8 @@ Integrate · Secure · Validate · Optimize
 
 > **Marco 1.0 — Laboratório público de pesquisa / Public research lab.** Base técnica V10.2 Launch Quality Edition preservada; demonstrações locais de integração, segurança, avaliação e desempenho de IA. Não é uma versão de produção nem certificação independente.
 
+**Papel no ecossistema / Ecosystem role:** No ecossistema K&G Vision, o Argus explora como tornar integrações de IA mais seguras, confiáveis e responsáveis. / Within the K&G Vision ecosystem, Argus explores more secure, reliable and responsible AI integrations.
+
 ## Argus Mini — amostras gratuitas / free samples (0.1.0)
 
 | Amostra / Sample | Funcionalidades / Features | Acesso / Access |
