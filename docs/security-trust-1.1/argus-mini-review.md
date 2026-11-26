@@ -25,5 +25,8 @@ Data: 2026-11-26. Escopo: revisão estática dos cinco arquivos da extensão ori
 
 ## Validação
 - Verificador de integridade: python3 tests/verify_mini_package.py; valida hash, nomes, CRC, paridade com fontes e manifesto sem executar os arquivos do ZIP.
-- Testes existentes: 23 casos de mascaramento, revisão e cobertura; execução CI e sintaxe de ambos os scripts a confirmar.
+- Testes existentes: 23/23 casos de mascaramento, revisão e cobertura aprovados. Sintaxe dos dois scripts aprovada.
 - Sem novo scan Defender, teste de instalação em Chrome/Edge, aprovação de loja ou assinatura digital nesta etapa. A revisão estática não comprova ausência de malware. A análise no Windows e a validação de instalação ficam para as etapas previstas. Não contornar alertas. Nenhum custo assumido.
+
+## Confirmação CI
+[Execução 45877994980](https://github.com/Kgasil/argus/actions/runs/45877994980), commit `7dee8ce1ae912d3d2e5b7c403a821a7b089e88f3`: concluída com sucesso. Verificação Python do ZIP, sintaxe dos scripts e testes Node aprovados em runner Linux. Não é scan Defender nem validação de instalação em navegador. Comparação com backup confirmou somente quatro arquivos de documentação e validação alterados/adicionados; extensão e ZIP preservados.
