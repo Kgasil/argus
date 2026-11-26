@@ -9,3 +9,8 @@
 - Extensões: privilegiar permissões mínimas e distribuição pelas lojas oficiais após revisão; instalação manual apenas para avaliação autorizada. Aplicativos Windows: utilizar assinatura Authenticode confiável quando disponível. A assinatura e o hash não são certificações de ausência de malware. / Prefer minimum permissions and official stores for extensions, and trusted Authenticode signing for Windows installers when available. Signing and hashes are not malware-free certifications.
 - Uma detecção deve ser investigada, corrigida se procedente ou submetida à [Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/filesubmission) como possível falso positivo. Não alterar arquivos somente para escapar de detecção. / Investigate and remediate real detections or submit suspected false positives to Microsoft; do not change files solely to evade detection.
 - Nenhuma versão deve ser anunciada como aprovada por antivírus sem evidência vinculada ao hash do pacote final, data, produto, versão das definições e resultado. / Never advertise antivirus approval without evidence tied to the exact final artifact hash, date, product, definition version and result.
+
+
+**Instalação suspensa (26/11/2026):** o Microsoft Defender removeu o ZIP 0.1.0 com alerta grave de Cavalo de Troia. Não instale, não permita nem restaure o arquivo. A causa ainda está em investigação. Use o [Mini Lab web](https://kgasil.github.io/argus/mini/) para conhecer a proposta. [Acompanhar incidente #1](https://github.com/Kgasil/argus/issues/1).
+
+**Installation paused:** Defender removed the ZIP with a severe Trojan detection. Do not install, allow or restore it. Investigation remains open; the web demo remains available.
