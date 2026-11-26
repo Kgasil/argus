@@ -1,6 +1,8 @@
-<p align="center"><a href="https://kgasil.github.io/vision/"><img src="assets/readme-cover.svg" alt="Project Vision — official project identity" width="760"></a></p>
+<p align="center"><a href="https://kgasil.github.io/vision/"><img src="assets/readme-cover.svg" alt="Project Argus — official project identity" width="760"></a></p>
 
-# Project Vision
+# Project Argus
+
+> Formerly Project Vision / Anteriormente Project Vision. The public identity is now Argus; the legacy repository and website paths are retained to preserve existing links. / A identidade pública agora é Argus; os endereços históricos do repositório e do site permanecem para preservar os links existentes.
 
 **Security and Development · Segurança e Desenvolvimento.**  
 *Independent AI research and engineering · by K&G Vision*
@@ -15,7 +17,7 @@ Integrate · Secure · Validate · Optimize
 
 ## English
 
-Project Vision is the applied AI research and engineering branch of K&G Vision. Our ambition is to make AI integration more secure, reliable and efficient through vendor-neutral research into cybersecurity, assurance, governance and performance. Explore the local laboratory to understand, test and challenge engineering concepts.
+Project Argus is the applied AI research and engineering branch of K&G Vision. Our ambition is to make AI integration more secure, reliable and efficient through vendor-neutral research into cybersecurity, assurance, governance and performance. Explore the local laboratory to understand, test and challenge engineering concepts.
 
 ### Technology laboratory
 
@@ -30,7 +32,7 @@ Project Vision is the applied AI research and engineering branch of K&G Vision. 
 
 The laboratory also includes an integrated enterprise simulation, Intelligence Studio, Trust Center, Research Center and Knowledge Center.
 
-**Current baseline:** V10.2 Launch Quality Edition, migrated to the Project Vision identity. The previous release documented 101 internal checks. The technical baseline was migrated to the current identity. Subsequent changes include ecosystem navigation and descriptive text. The 101 checks belong to the earlier revision; current browser regression tests have not been rerun.
+**Current baseline:** V10.2 Launch Quality Edition, migrated to the Project Argus identity. The previous release documented 101 internal checks. The technical baseline was migrated to the current identity. Subsequent changes include ecosystem navigation and descriptive text. The 101 checks belong to the earlier revision; current browser regression tests have not been rerun.
 
 All current demonstrations run locally in the browser using synthetic or user-supplied inputs. They are educational prototypes, not production security products, live provider integrations or independent audits. Do not submit sensitive real-world data.
 
@@ -40,7 +42,7 @@ Open `index.html` in a browser, or serve the repository root with a local static
 
 ## Português
 
-O Project Vision é a frente de pesquisa e engenharia da K&G Vision, uma iniciativa tecnológica independente. Nosso foco é integração de IA, segurança, avaliação, governança e desempenho, sem dependência de um único fornecedor.
+O Project Argus é a frente de pesquisa e engenharia da K&G Vision, uma iniciativa tecnológica independente. Nosso foco é integração de IA, segurança, avaliação, governança e desempenho, sem dependência de um único fornecedor.
 
 O laboratório reúne seis motores demonstrativos, onze demonstrações locais, guias técnicos, pesquisas, uma plataforma integrada, Trust Center e Intelligence Studio.
 
@@ -58,11 +60,11 @@ Abra `index.html` no navegador ou utilize um servidor HTTP estático local. Não
 | --- | --- | --- | --- |
 | K&G Vision | [Institutional](https://kgasil.github.io/) | [Source](https://github.com/Kgasil/kgasil.github.io) | Independent initiative / Iniciativa independente |
 | Project Genesis | [Wisdom & Application / Sabedoria e Aplicação](https://kgasil.github.io/genesis/) | [Source](https://github.com/Kgasil/genesis) | **1.0 — Editorial & Library / Acervo e biblioteca.** 75 private study PDFs; [public interactive library](https://kgasil.github.io/genesis/biblioteca.html) / 75 PDFs privados; biblioteca pública interativa, sem cursos ou certificados. |
-| Project Vision | [Security & Development / Segurança e Desenvolvimento](https://kgasil.github.io/vision/) | [Source](https://github.com/Kgasil/vision) | **1.0 — Public Research Lab / Laboratório público.** Technical baseline V10.2; local demonstrations / Base técnica V10.2; demonstrações locais, não serviços de produção. |
+| Project Argus | [Security & Development / Segurança e Desenvolvimento](https://kgasil.github.io/vision/) | [Source](https://github.com/Kgasil/vision) | **1.0 — Public Research Lab / Laboratório público.** Technical baseline V10.2; local demonstrations / Base técnica V10.2; demonstrações locais, não serviços de produção. |
 | Project Aeris | [Discreet & Efficient / Discreto e Eficiente](https://kgasil.github.io/aeris/) | [Source](https://github.com/Kgasil/aeris) | **1.0 — Extension 1.0.0.** [Manual installation / Instalação manual](https://github.com/Kgasil/aeris/tree/main/extension); Desktop 1.0.0rc1 remains a preview / permanece em prévia. |
 | Project Lilium | [Strategy & Growth / Estratégia e Crescimento](https://kgasil.github.io/lilium/) | [Source](https://github.com/Kgasil/lilium) | **1.0 — Web Lab.** Public demo / demonstração pública; Desktop v0.14.0 controlled preview / prévia controlada; [Mini v0.1.1](https://github.com/Kgasil/lilium/tree/main/extension) experimental. |
 
-**Version note / Nota de versão:** 1.0 identifies the first completed public-facing project milestone of the ecosystem, not a uniform software release tag. Genesis is an editorial milestone; Vision retains technical baseline V10.2; Aeris 1.0.0 applies to Extension; Lilium 1.0 applies to Web Lab. / 1.0 identifica o primeiro marco público do ecossistema, não uma tag de software uniforme. Genesis é um marco editorial; Vision mantém a base V10.2; Aeris 1.0.0 refere-se à extensão; Lilium 1.0 refere-se ao Web Lab. Desktop previews are not stable releases / Prévias Desktop não são versões estáveis.
+**Version note / Nota de versão:** 1.0 identifies the first completed public-facing project milestone of the ecosystem, not a uniform software release tag. Genesis is an editorial milestone; Argus retains technical baseline V10.2; Aeris 1.0.0 applies to Extension; Lilium 1.0 applies to Web Lab. / 1.0 identifica o primeiro marco público do ecossistema, não uma tag de software uniforme. Genesis é um marco editorial; Argus mantém a base V10.2; Aeris 1.0.0 refere-se à extensão; Lilium 1.0 refere-se ao Web Lab. Desktop previews are not stable releases / Prévias Desktop não são versões estáveis.
 
 **Learn · Build · Simplify · Transform / Aprender · Construir · Simplificar · Transformar**
 
@@ -83,7 +85,7 @@ Contact: [LinkedIn](https://www.linkedin.com/in/kaio-gabriel-da-silva) · [GitHu
 
 Official visual lockup: **K&G** above **Vision**; individual project symbols are retained. / Assinatura visual oficial: **K&G** acima de **Vision**, mantendo os símbolos individuais dos projetos.
 
-**Genesis (purple) · Vision (blue) · Aeris (green) · Lilium (rose)**
+**Genesis (purple) · Argus (blue) · Aeris (green) · Lilium (rose)**
 
 [Lilium Interactive Lab / Laboratório interativo](https://kgasil.github.io/lilium/#lab) · [Insights CSV demo](https://kgasil.github.io/lilium/demo.html) — browser-based synthetic exercises; no connected AI or commercial offering.
 
