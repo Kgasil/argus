@@ -15,6 +15,19 @@ Integrate · Secure · Validate · Optimize
 
 > **Marco 1.0 — Laboratório público de pesquisa / Public research lab.** Base técnica V10.2 Launch Quality Edition preservada; demonstrações locais de integração, segurança, avaliação e desempenho de IA. Não é uma versão de produção nem certificação independente.
 
+## Argus Mini — amostras gratuitas / free samples (0.1.0)
+
+| Amostra / Sample | Funcionalidades / Features | Acesso / Access |
+| --- | --- | --- |
+| **Mini Lab** | Mascaramento de padrões de dados, revisão heurística de prompts, cobertura de critérios textuais / Data-pattern masking, heuristic prompt review, textual criteria coverage | [Aplicativo web / Web app](https://kgasil.github.io/argus/mini/) |
+| **Mini Extension** | Revisão manual de textos e prompts, sem permissões declaradas / Manual text and prompt review, no declared permissions | [Tutorial e código / Tutorial and source](extension/README.md) |
+
+Amostras experimentais 0.1.0, independentes do marco público Argus 1.0. Processamento local com regras determinísticas, sem IA conectada, conta, telemetria, armazenamento persistente ou integração empresarial. Use dados fictícios; não substituem DLP, avaliação factual ou controles empresariais. Interface em português. Extensão para instalação manual, não publicada em lojas; validação manual de navegadores pendente.
+
+Experimental 0.1.0 samples, separate from Argus public milestone 1.0. Local deterministic processing, no connected AI, account, telemetry, persistent storage or enterprise integration. Synthetic data only; not a substitute for DLP, factual verification or enterprise controls. Portuguese preview UI. Manual extension installation; browser acceptance pending, not in stores.
+
+**Validation / Validação:** 23 deterministic rule checks in `tests/mini.test.js`; run `node tests/mini.test.js`. [CI workflow](https://github.com/Kgasil/argus/actions/workflows/mini-validation.yml).
+
 ## English
 
 Project Argus is the applied AI research and engineering branch of K&G Vision. Our ambition is to make AI integration more secure, reliable and efficient through vendor-neutral research into cybersecurity, assurance, governance and performance. Explore the local laboratory to understand, test and challenge engineering concepts.
