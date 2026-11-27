@@ -1,0 +1,47 @@
+name: Argus Block 09 development validation
+on:
+  push:
+    branches:
+      - development/argus-block-09-quality-assurance
+    paths:
+      - 'development/**'
+      - 'extension/**'
+      - 'tests/**'
+      - 'downloads/**'
+      - '.github/workflows/argus-block-09.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/mini.test.js
+      - run: python3 tests/verify_mini_package.py
+      - run: node development/block-02/privacy.test.js
+      - run: node development/block-03/review.test.js
+      - run: node development/block-04/assurance.test.js
+      - run: node development/block-05/session.test.js
+      - run: node --check development/block-06/extension/ui.js
+      - run: node development/block-06/extension.test.js
+      - run: google-chrome --version
+      - run: node development/block-06/browser.test.js
+      - run: node --check development/block-07/lab.js
+      - run: node --check development/block-07/mini/ui.js
+      - run: node development/block-07/lab.test.js
+      - run: node development/block-07/browser.test.js
+      - run: node development/block-08/design.test.js
+      - run: node development/block-08/browser.test.js
+      - uses: actions/upload-artifact@v4
+        with:
+          name: argus-design-evidence
+          path: argus-design-evidence/*.png
+          if-no-files-found: error
+          retention-days: 7
+      - run: node development/block-09/benchmark.test.js
+      - run: node development/block-09/performance.test.js
+      - run: node development/block-09/privacy-browser.test.js

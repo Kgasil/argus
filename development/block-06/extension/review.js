@@ -18,10 +18,11 @@ function makeReview(privacyApi){
  function review(value,context={}){
   if(typeof value!=="string")throw new TypeError("Texto inválido.");
   if(value.length>LIMIT)throw new RangeError("Limite de 12.000 caracteres.");
-  if(context===null||typeof context!=="object"||Array.isArray(context))throw new TypeError("Contexto inválido.");
-  const source=context.source===undefined?"unknown":context.source;
-  const action=context.action===undefined?"none":context.action;
-  const authorized=context.authorized===undefined?false:context.authorized;
+  if(context===null||typeof context!=="object"||Array.isArray(context)||(Object.getPrototypeOf(context)!==Object.prototype&&Object.getPrototypeOf(context)!==null))throw new TypeError("Contexto inválido.");
+  const own=k=>Object.prototype.hasOwnProperty.call(context,k)?context[k]:undefined;
+  const source=own("source")===undefined?"unknown":own("source");
+  const action=own("action")===undefined?"none":own("action");
+  const authorized=own("authorized")===undefined?false:own("authorized");
   if(!sources.includes(source)||!actions.includes(action)||typeof authorized!=="boolean")throw new TypeError("Metadados inválidos.");
   const text=normalize(value);
   if(text.length>LIMIT*4)throw new RangeError("Texto normalizado excede o limite.");

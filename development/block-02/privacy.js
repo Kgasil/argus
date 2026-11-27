@@ -9,7 +9,7 @@ function makePrivacy(){
     ["credential",/\b(?:authorization\s*:\s*)?bearer[ \t]+[A-Za-z0-9._~+\/=-]+/gi],
     ["credential",/\b(?:senha|password|passwd|pwd|api[_ -]?key|access[_ -]?token|refresh[_ -]?token|client[_ -]?secret|token|secret)\b[ \t]*[:=][ \t]*(?:"(?:\\.|[^"\\\r\n])*"|'(?:\\.|[^'\\\r\n])*'|[^\s,;}\]]+)/gi],
     ["key",/\b(?:sk-[A-Za-z0-9_-]{16,}|AKIA[A-Z0-9]{16}|gh[pousr]_[A-Za-z0-9_]{20,})\b/g],
-    ["email",/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi],
+    ["email",/(?<![A-Z0-9._%+-])[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi],
     ["cnpj",/\b\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}\b/g],
     ["phone",/\b(?:telefone|celular|phone|tel)[ \t]*[:=][ \t]*(?:\+55[ \t]*)?(?:\(\d{2}\)|\d{2})[ \t]*\d{4,5}-?\d{4}\b/gi],
     ["phone",/(?:\+55[ \t]*)?\(\d{2}\)[ \t]*\d{4,5}-?\d{4}\b|\+55[ \t]?\d{2}[ \t]?\d{4,5}-?\d{4}\b|\b\d{2}[ \t]+\d{4,5}-\d{4}\b/g],
