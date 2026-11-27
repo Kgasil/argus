@@ -178,8 +178,8 @@
     }
   },
   "governance": {
-    "stage": "09.7",
-    "status": "partial",
+    "stage": "09.8",
+    "status": "partial_external_decisions_pending",
     "actionPins": {
       "actions/checkout": "11d5960a326750d5838078e36cf38b85af677262",
       "actions/setup-node": "49933ea5288caeca8642d1e84afbd3f7d6820020",
@@ -187,12 +187,39 @@
     },
     "pinnedHistoricalWorkflows": 13,
     "pinnedHistoricalReferences": 32,
-    "license": "owner_decision_pending",
+    "license": "owner_decision_pending_no_new_grant",
     "mainProtection": "not_configured; proposal only",
     "incidentDocumentation": "aligned_on_experimental_branch",
     "runtimeChanged": false,
     "independentEvaluation": "not_performed",
     "physicalAcceptance": "blocked",
-    "candidateIntegration": "not_approved"
+    "candidateIntegration": "not_approved",
+    "integration": {
+      "status": "not_approved",
+      "main": "a7a68a59b30dd7cb52eac8b531aa76158fb1377e",
+      "mergeBase": "795521415839dd5f68232078bef33f081786b974",
+      "baselineAhead": 26,
+      "baselineBehind": 3,
+      "mainOnlyChangedPaths": [
+        "README.md",
+        "index.html"
+      ]
+    },
+    "finalReview": {
+      "baseline": "4a6e25e4ebaa75af5df9a56400c438aa186d90a1",
+      "newFunctionalChecks": 0,
+      "priorFunctionalChecks": 703,
+      "governanceWorkflows": [
+        46075007853,
+        46075007799
+      ],
+      "candidateInventory": "candidate-inventory.json",
+      "reviewTemplate": "INDEPENDENT-REVIEW-REPORT.template.json",
+      "externalDecisionRecord": "FINAL-ACCEPTANCE-HANDOFF.md",
+      "microsoftVerdict": "not_available_in_github",
+      "submittedSampleSha256": "unconfirmed",
+      "nativeAcceptance": "blocked",
+      "independentEvaluation": "not_performed"
+    }
   }
 }

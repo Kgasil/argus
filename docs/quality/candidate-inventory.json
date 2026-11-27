@@ -1,0 +1,93 @@
+{
+  "schema": "argus-candidate-inventory-v1",
+  "status": "source_reference_only_not_installation_approval",
+  "testedCode": "8f02f00b1f2a2bbe5973db3d28b43e3f1fd824e6",
+  "referenceCommit": "4a6e25e4ebaa75af5df9a56400c438aa186d90a1",
+  "functionalWorkflow": 46074298790,
+  "verifiedFunctionalChecks": 703,
+  "governanceCommit": "9a2fff7a1825c79ba178286bcc86c5dbb2aab232",
+  "governanceWorkflows": [
+    46075007853,
+    46075007799
+  ],
+  "extensionSource": [
+    {
+      "path": "development/block-06/extension/assurance.js",
+      "gitBlob": "755f1830dfce0cced0af58eae4a13d9a2f26a590",
+      "sizeBytes": 4137
+    },
+    {
+      "path": "development/block-06/extension/brand.svg",
+      "gitBlob": "3b9f4a64784249c668de1b4e01fdcab5e7c6ea11",
+      "sizeBytes": 1666
+    },
+    {
+      "path": "development/block-06/extension/i18n.js",
+      "gitBlob": "0bb162fa1fb51bb10b93e502fdf18f593e86ee7a",
+      "sizeBytes": 12547
+    },
+    {
+      "path": "development/block-06/extension/manifest.json",
+      "gitBlob": "c8e53adb1a817ffe1573cae9b343270888b7af2a",
+      "sizeBytes": 513
+    },
+    {
+      "path": "development/block-06/extension/popup.html",
+      "gitBlob": "6aa34d5031bbe16984c912e6350f3aafaab636e8",
+      "sizeBytes": 5041
+    },
+    {
+      "path": "development/block-06/extension/privacy.js",
+      "gitBlob": "81ee230b2e4f82a3d463c21894d8d5b5f5f143ab",
+      "sizeBytes": 6498
+    },
+    {
+      "path": "development/block-06/extension/review.js",
+      "gitBlob": "a019c3dce173ea26c2d4fffcf8777247eddd04df",
+      "sizeBytes": 7022
+    },
+    {
+      "path": "development/block-06/extension/session.js",
+      "gitBlob": "4d52bbe3f2aae2b9bf7e1347040b45b3188a168b",
+      "sizeBytes": 4723
+    },
+    {
+      "path": "development/block-06/extension/style.css",
+      "gitBlob": "b06956f8732f5b1d98d4ac58a940618ad66ee0a6",
+      "sizeBytes": 3734
+    },
+    {
+      "path": "development/block-06/extension/ui.js",
+      "gitBlob": "f3cc0ce42b681d36d294ae2580f7148e7ef358b5",
+      "sizeBytes": 6410
+    }
+  ],
+  "frozenCorpora": [
+    {
+      "path": "development/block-09-2/corpus.json",
+      "gitBlob": "d68d32bc32357350c4061af6fd960266ad0a700c"
+    },
+    {
+      "path": "development/block-09-3/exact.json",
+      "gitBlob": "81c52bc48a0ce394c8a1357b9d80477be90721dc"
+    },
+    {
+      "path": "docs/quality/block-09-2-challenge.json",
+      "gitBlob": "193a22c73e6acc07f4b201d832020bbb9569a232"
+    },
+    {
+      "path": "docs/quality/block-09-3-challenge.json",
+      "gitBlob": "8a8e3d8b18fe7e03419aa61632d2734f52d2935e"
+    },
+    {
+      "path": "docs/quality/block-09-5-probe.json",
+      "gitBlob": "ff46c09bcba113baa1c33122c549c16b548228ed"
+    }
+  ],
+  "originalZip": {
+    "gitBlob": "af5ec6c2df362ac3018cd00afd60b1dc87ccfdc1",
+    "sha256": "3248c6c204b5651a9f63c5630547e1a18f021a0ffdc08feaba1566e7925fb8b1",
+    "disposition": "preserve; do not download, execute or redistribute"
+  },
+  "note": "Git blob identifiers are not raw-file SHA-256. Record SHA-256 of the exact candidate bytes in approved environment after safety clearance; no package generated here."
+}
