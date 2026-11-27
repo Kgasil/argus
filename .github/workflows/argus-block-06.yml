@@ -1,0 +1,32 @@
+name: Argus Block 06 development validation
+on:
+  push:
+    branches:
+      - development/argus-block-06-extension
+    paths:
+      - 'development/**'
+      - 'extension/**'
+      - 'tests/**'
+      - 'downloads/**'
+      - '.github/workflows/argus-block-06.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/mini.test.js
+      - run: python3 tests/verify_mini_package.py
+      - run: node development/block-02/privacy.test.js
+      - run: node development/block-03/review.test.js
+      - run: node development/block-04/assurance.test.js
+      - run: node development/block-05/session.test.js
+      - run: node --check development/block-06/extension/ui.js
+      - run: node development/block-06/extension.test.js
+      - run: google-chrome --version
+      - run: node development/block-06/browser.test.js
