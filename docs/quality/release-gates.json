@@ -176,5 +176,23 @@
       "tn": 10,
       "fn": 2
     }
+  },
+  "governance": {
+    "stage": "09.7",
+    "status": "partial",
+    "actionPins": {
+      "actions/checkout": "11d5960a326750d5838078e36cf38b85af677262",
+      "actions/setup-node": "49933ea5288caeca8642d1e84afbd3f7d6820020",
+      "actions/upload-artifact": "ea165f8d65b6e75b540449e92b4886f43607fa02"
+    },
+    "pinnedHistoricalWorkflows": 13,
+    "pinnedHistoricalReferences": 32,
+    "license": "owner_decision_pending",
+    "mainProtection": "not_configured; proposal only",
+    "incidentDocumentation": "aligned_on_experimental_branch",
+    "runtimeChanged": false,
+    "independentEvaluation": "not_performed",
+    "physicalAcceptance": "blocked",
+    "candidateIntegration": "not_approved"
   }
 }

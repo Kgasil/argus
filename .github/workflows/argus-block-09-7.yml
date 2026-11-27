@@ -1,0 +1,22 @@
+name: Argus Block 09.7 governance validation
+on:
+  push:
+    branches:
+      - development/argus-block-09-7-governance
+    paths:
+      - '.github/workflows/**'
+      - 'docs/quality/GOVERNANCE.md'
+      - 'docs/quality/release-gates.json'
+      - 'tests/governance/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - run: python3 tests/governance/check.py

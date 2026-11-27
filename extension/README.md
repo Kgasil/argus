@@ -7,9 +7,9 @@ Extensão gratuita para navegadores Chromium. Abra a extensão e cole texto fict
 > [!WARNING]
 > **AVISO IMPORTANTE DE SEGURANÇA — Argus Mini 0.1.0 (26/11/2026)**
 >
-> O Microsoft Defender detectou o pacote ZIP 0.1.0 como Trojan:Script/Ulthar.A!ml (ThreatID 2147751841), com alerta grave, e removeu o arquivo. Estamos investigando a causa e preparando a solicitação de análise oficial à Microsoft. Não há confirmação de falso positivo ou liberação. Nunca recomendamos desativar o Windows Defender, ignorar alertas ou restaurar arquivos em quarentena. A instalação permanece suspensa; o laboratório web está disponível sem instalação.
+> O Microsoft Defender detectou o pacote ZIP 0.1.0 como Trojan:Script/Ulthar.A!ml (ThreatID 2147751841), com alerta grave, e removeu o arquivo. A amostra foi submetida à Microsoft em 26/11/2026; o parecer oficial permanece pendente e o hash da amostra submetida ainda não foi confirmado. Não há confirmação de falso positivo ou liberação. Nunca recomendamos desativar o Windows Defender, ignorar alertas ou restaurar arquivos em quarentena. A instalação permanece suspensa; o laboratório web está disponível sem instalação.
 >
-> Microsoft Defender detected the 0.1.0 ZIP as Trojan:Script/Ulthar.A!ml (ThreatID 2147751841), rated severe, and removed the file. We are investigating the cause and preparing an official review request to Microsoft. No false-positive determination or clearance has been confirmed. We never recommend disabling Windows Defender, bypassing warnings or restoring quarantined files. Installation remains paused; the web lab is available without installation.
+> Microsoft Defender detected the 0.1.0 ZIP as Trojan:Script/Ulthar.A!ml (ThreatID 2147751841), rated severe, and removed the file. The sample was submitted to Microsoft on November 26, 2026; the official verdict is pending and the submitted sample hash remains unconfirmed. No false-positive determination or clearance has been confirmed. We never recommend disabling Windows Defender, bypassing warnings or restoring quarantined files. Installation remains paused; the web lab is available without installation.
 >
 > [Incidente oficial](https://github.com/Kgasil/argus/issues/1) · [Mini Lab web](https://kgasil.github.io/argus/mini/)
 
