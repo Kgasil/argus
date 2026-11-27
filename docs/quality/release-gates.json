@@ -2,11 +2,11 @@
   "schema": "argus-release-gate-v1",
   "date": "2026-11-27",
   "decision": "NO_GO",
-  "testedCommit": "7770c0990e993a56cf09364fddb78525e5ee11d7",
-  "baseline": "96a0045bec9c03409b4ee9b660082749a52ed30e",
-  "workflow": 46073920926,
-  "verifiedChecks": 651,
-  "newFunctionalChecks": 75,
+  "testedCommit": "8f02f00b1f2a2bbe5973db3d28b43e3f1fd824e6",
+  "baseline": "c2e97cb0fef9520320c9dfaecc7d101c37b83ecd",
+  "workflow": 46074298790,
+  "verifiedChecks": 703,
+  "newFunctionalChecks": 52,
   "globalScore": null,
   "minimumScore": 9,
   "dimensions": [
@@ -118,7 +118,7 @@
   "main": "a7a68a59b30dd7cb52eac8b531aa76158fb1377e",
   "remediation": {
     "stage": "09.6",
-    "status": "awaiting_ci_and_independent_review",
+    "status": "ci_passed_independent_review_and_native_blocked",
     "priorEvidencePreserved": true,
     "physicalProtocol": "PHYSICAL-ACCEPTANCE.md",
     "nativeRetry": "deferred_previously_blocked_environment",
@@ -135,7 +135,21 @@
       },
       "independent": false
     },
-    "independentProtocol": "INDEPENDENT-EVALUATION.md"
+    "independentProtocol": "INDEPENDENT-EVALUATION.md",
+    "known09_5ProbeRetest": {
+      "privacyExact": 12,
+      "privacyTotal": 12,
+      "privacyPositiveExact": 7,
+      "privacyPositiveTotal": 7,
+      "prompt": {
+        "tp": 6,
+        "fp": 1,
+        "tn": 5,
+        "fn": 0
+      },
+      "independent": false
+    },
+    "independentEvaluationStatus": "not_performed"
   },
   "historical09_4Challenge": {
     "positive": 16,
