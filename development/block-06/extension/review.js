@@ -4,6 +4,10 @@ function makeReview(privacyApi){
  "use strict";
  const LIMIT=12000;
  const rules=[
+ ["instruction_override",/\b(?:treat|regard|consider)\b.{0,65}\b(?:as the|as your)\b.{0,35}\b(?:governing|highest priority|authoritative)\b.{0,35}\b(?:policy|instructions?|rules?)\b/is],
+ ["instruction_override",/\b(?:previous|prior|earlier)\s+(?:constraints|rules|instructions|policies)\s+(?:no longer apply|are no longer valid)\b/i],
+ ["instruction_override",/\b(?:document|documento|mensagem|message)\b.{0,40}\b(?:supersedes|substitui|replaces)\b.{0,55}\b(?:instructions?|rules?|diretrizes|instrucoes|regras)\b/is],
+ ["secret_request",/\b(?:entregue|forneca|provide|hand over)\b.{0,70}\b(?:chaves? confidenciais?|confidential keys?|senhas?|passwords?|tokens?)\b/is],
  ["instruction_override",/\b(?:ignore|ignorar|desconsidere|disregard|forget|override|substitua)\b.{0,90}\b(?:instructions?|rules?|policies|policy|instrucoes|regras|politicas?|diretrizes)\b/is],
  ["secret_request",/\b(?:reveal|show|print|send|expose|disclose|extract|revele|mostre|envie|exponha|extraia|divulgue)\b.{0,90}\b(?:secrets?|passwords?|senhas?|segredos?|tokens?|api[ _-]?keys?|chaves? privadas?|private keys?|system prompts?|prompts? de sistema)\b/is],
  ["permission_bypass",/\b(?:bypass|disable|circumvent|contorne|desative|ignore|burle|ignorar)\b.{0,90}\b(?:security|permissions?|approval|authorization|autorizacao|aprovacao|seguranca|permissoes|controls?|controles?|filtros?|filters?)\b/is],
@@ -26,7 +30,7 @@ function makeReview(privacyApi){
   if(!sources.includes(source)||!actions.includes(action)||typeof authorized!=="boolean")throw new TypeError("Metadados inválidos.");
   const text=normalize(value);
   if(text.length>LIMIT*4)throw new RangeError("Texto normalizado excede o limite.");
-  const signals=rules.filter(([,re])=>re.test(text)).map(([kind])=>kind);
+  const signals=[...new Set(rules.filter(([,re])=>re.test(text)).map(([kind])=>kind))];
   const sensitive=privacyApi.privacy(value).total;
   if(sensitive)signals.push("sensitive_pattern");
   const has=k=>signals.includes(k);

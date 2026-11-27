@@ -1,6 +1,8 @@
 /* Argus Block 08 — deterministic, local PT/EN interface messages. */
 (function(root){ "use strict";
 const messages=Object.freeze({
+  "Nome pessoal": "Personal name",
+  "Endereço": "Address",
   "K&G VISION · PRÉVIA": "K&G VISION · PREVIEW",
   "Project Argus — identidade oficial K&G Vision": "Project Argus — official K&G Vision identity",
   "Proteção para IA": "Protection for AI",

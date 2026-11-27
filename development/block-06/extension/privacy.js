@@ -9,6 +9,10 @@ function makePrivacy(){
     ["credential",/\b(?:authorization\s*:\s*)?bearer[ \t]+[A-Za-z0-9._~+\/=-]+/gi],
     ["credential",/\b(?:senha|password|passwd|pwd|api[_ -]?key|access[_ -]?token|refresh[_ -]?token|client[_ -]?secret|token|secret)\b[ \t]*[:=][ \t]*(?:"(?:\\.|[^"\\\r\n])*"|'(?:\\.|[^'\\\r\n])*'|[^\s,;}\]]+)/gi],
     ["key",/\b(?:sk-[A-Za-z0-9_-]{16,}|AKIA[A-Z0-9]{16}|gh[pousr]_[A-Za-z0-9_]{20,})\b/g],
+    ["person_name",/\b(?:nome(?: completo| fict[ií]cio)?|full name|personal name)[ \t]*:[ \t]*([^\r\n;]{2,160})/gdi,1],
+    ["address",/\b(?:endere[cç]o(?: residencial| fict[ií]cio)?|home address|residential address)[ \t]*:[ \t]*([^\r\n;]{3,160})/gdi,1],
+    ["credential",/\b(?:senha|password|passwd|pwd)[ \t]+(?:é|is)[ \t]+(?:"(?:\\.|[^"\\\r\n])+"|\'(?:\\.|[^\'\\\r\n])+\'|[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)+)/gi],
+    ["email",/\b[A-Z0-9._%+-]+[ \t]*(?:\[at\]|\(at\))[ \t]*[A-Z0-9-]+(?:[ \t]*(?:\[dot\]|\(dot\))[ \t]*[A-Z0-9-]+)+\b/gi],
     ["email",/(?<![A-Z0-9._%+-])[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi],
     ["cnpj",/\b\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}\b/g],
     ["phone",/\b(?:telefone|celular|phone|tel)[ \t]*[:=][ \t]*(?:\+55[ \t]*)?(?:\(\d{2}\)|\d{2})[ \t]*\d{4,5}-?\d{4}\b/gi],
@@ -16,7 +20,7 @@ function makePrivacy(){
     ["cpf",/\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b/g],
     ["card",/(?<!\d)(?<!\d[ -])(?:\d[ -]?){12,18}\d(?![ -]?\d)/g]
   ];
-  const labels={private_key:"CHAVE_PRIVADA",credential:"CREDENCIAL",key:"CHAVE",email:"EMAIL",cnpj:"CNPJ",phone:"TELEFONE",cpf:"CPF",card:"CARTAO"};
+  const labels={person_name:"NOME",address:"ENDERECO",private_key:"CHAVE_PRIVADA",credential:"CREDENCIAL",key:"CHAVE",email:"EMAIL",cnpj:"CNPJ",phone:"TELEFONE",cpf:"CPF",card:"CARTAO"};
   function luhn(s){
     const d=s.replace(/\D/g,""); if(d.length<13||d.length>19||/^(\d)\1+$/.test(d))return false;
     let sum=0;for(let i=d.length-1,j=0;i>=0;i--,j++){let x=Number(d[i]);if(j%2){x*=2;if(x>9)x-=9;}sum+=x;}return sum%10===0;
@@ -28,6 +32,7 @@ function makePrivacy(){
     rules.forEach(([kind,re,group],priority)=>{
       for(const m of value.matchAll(re)){
         if(kind==="card"&&!luhn(m[0]))continue;
+        if(kind==="cpf"&&/^\d{11}$/.test(m[0])&&/\b(?:pedido(?: interno)?|numero do pedido|número do pedido|order(?: id| number)?)[ \t]*[:#]?[ \t]*$/i.test(value.slice(Math.max(0,m.index-80),m.index)))continue;
         const [start,end]=group?m.indices[group]:[m.index,m.index+m[0].length];
         if(start===end)continue;
         hits.push({start,end,kind,priority});

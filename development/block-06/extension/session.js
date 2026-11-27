@@ -3,7 +3,7 @@
 function makeSessionAPI(privacy,security,assurance){
  "use strict";
  const operations=Object.freeze(["mask","review","assess"]);
- const categories=Object.freeze(["private_key","credential","key","email","cnpj","cpf","phone","card"]);
+ const categories=Object.freeze(["private_key","credential","key","email","cnpj","cpf","phone","card","person_name","address"]);
  const signals=Object.freeze(["instruction_override","secret_request","permission_bypass","authority_claim","execution_request","external_transfer","concealment","sensitive_pattern","authorization_missing","untrusted_action_source"]);
  const statuses=Object.freeze(["compatible","contradiction","mixed_evidence","text_only","unsupported"]);
  function plain(v){return v!==null&&typeof v==="object"&&!Array.isArray(v)&&(Object.getPrototypeOf(v)===Object.prototype||Object.getPrototypeOf(v)===null);}
