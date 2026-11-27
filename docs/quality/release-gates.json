@@ -2,11 +2,11 @@
   "schema": "argus-release-gate-v1",
   "date": "2026-11-27",
   "decision": "NO_GO",
-  "testedCommit": "66ad237859121d32c6384e0353b2a6a514923e4e",
-  "baseline": "a3d871dca2f4a628c8ca21afeb6523f741ee0b86",
-  "workflow": 46073286416,
-  "verifiedChecks": 576,
-  "newFunctionalChecks": 0,
+  "testedCommit": "7770c0990e993a56cf09364fddb78525e5ee11d7",
+  "baseline": "96a0045bec9c03409b4ee9b660082749a52ed30e",
+  "workflow": 46073920926,
+  "verifiedChecks": 651,
+  "newFunctionalChecks": 75,
   "globalScore": null,
   "minimumScore": 9,
   "dimensions": [
@@ -49,29 +49,23 @@
   ],
   "challenge": {
     "positive": 16,
-    "exactOutput": 11,
-    "manuallyAdjudicatedCompleteRemoval": 12,
-    "residualSensitiveCases": [
-      "x10",
-      "x12",
-      "x13",
-      "x14"
-    ],
-    "formatOnly": [
-      "x11"
-    ],
+    "exactOutput": 16,
+    "completeRemovalKnownFixtures": 16,
+    "residualSensitiveCases": [],
+    "formatOnly": [],
     "privacy": {
-      "tp": 13,
+      "tp": 16,
       "fp": 0,
       "tn": 8,
-      "fn": 3
+      "fn": 0
     },
     "prompt": {
-      "tp": 10,
-      "fp": 2,
-      "tn": 10,
-      "fn": 2
-    }
+      "tp": 12,
+      "fp": 1,
+      "tn": 11,
+      "fn": 0
+    },
+    "scope": "known frozen regressions only"
   },
   "gates": [
     {
@@ -124,9 +118,48 @@
   "main": "a7a68a59b30dd7cb52eac8b531aa76158fb1377e",
   "remediation": {
     "stage": "09.5",
-    "status": "awaiting_ci_and_independent_review",
+    "status": "ci_passed_independent_review_and_native_blocked",
     "priorEvidencePreserved": true,
     "physicalProtocol": "PHYSICAL-ACCEPTANCE.md",
-    "nativeRetry": "deferred_previously_blocked_environment"
+    "nativeRetry": "deferred_previously_blocked_environment",
+    "postFreezeProbe": {
+      "privacyPositiveExact": 5,
+      "privacyPositiveTotal": 7,
+      "privacyExact": 10,
+      "privacyTotal": 12,
+      "prompt": {
+        "tp": 5,
+        "fp": 2,
+        "tn": 4,
+        "fn": 1
+      },
+      "independent": false
+    }
+  },
+  "historical09_4Challenge": {
+    "positive": 16,
+    "exactOutput": 11,
+    "manuallyAdjudicatedCompleteRemoval": 12,
+    "residualSensitiveCases": [
+      "x10",
+      "x12",
+      "x13",
+      "x14"
+    ],
+    "formatOnly": [
+      "x11"
+    ],
+    "privacy": {
+      "tp": 13,
+      "fp": 0,
+      "tn": 8,
+      "fn": 3
+    },
+    "prompt": {
+      "tp": 10,
+      "fp": 2,
+      "tn": 10,
+      "fn": 2
+    }
   }
 }
