@@ -1,0 +1,10 @@
+# Aceitação física assistida / assisted physical acceptance
+Status: BLOCKED. Do not install or download the investigated ZIP. This is a conditional protocol, not permission to install.
+## 0 — external clearance
+Owner privately checks Microsoft submission status using official portal (https://www.microsoft.com/en-us/wdsi/filesubmission). Record verdict, analysis date, threat ID, SHA-256 of exact submitted sample if available; do not send private paths or submission identifiers to public GitHub. If pending, ambiguous or malware confirmed, STOP; investigate with active protection. Do not restore quarantine or disable Defender, SmartScreen or sandbox.
+## 1 — candidate safety review
+Only after vendor disposition and explicit authorization for an isolated candidate: record exact source commit, all file hashes, Windows build, Chrome/Edge versions, Defender engine and definitions, active protection, candidate scan result. Stop at any detection; preserve diagnostic evidence. Original ZIP never used. No release/package generated in 09.5.
+## 2 — native and physical acceptance (conditional)
+In a clean approved test profile with normal browser protections, confirm native MV3 origin, minimal permissions, CSP enforcement, local processing, synthetic masking/review/evidence exercises, export confirmation, no unexpected storage/traffic, restart and disposal. Check both browsers, keyboard-only navigation, screen reader, zoom, small screen, sustained responsiveness. Record actual observed result per criterion, OS/browser version and exact candidate hash. No real secrets. No pass based on screenshots alone.
+## 3 — independent evaluation and signoff
+Independent reviewer freezes representative supported-scope fixtures before evaluation, labels actual sensitive spans and prompt intent, separates exact formatting from complete removal and reports residuals plus precision/recall >=90%. Frozen historical cases are regression only. Seven release gates remain required, weighted quality >=9/10 and explicit owner approval of exact candidate. Never convert a blocked test into pass.

@@ -13,3 +13,6 @@ Exact-output regression compares complete synthetic masking with expected output
 
 ## Block 09.4 release gate
 See [release-gates.json](release-gates.json) and [block-09-4-evidence.md](block-09-4-evidence.md). NO-GO. A green workflow without explicit native pass is not acceptance. Preflight blank browser on approved isolated host before candidate load; log version, bounded sanitized stderr and exit/signal, sandbox status; stop if blocked. Record exact candidate hashes and separate vendor verdict and physical checks. Distinguish exact output, complete removal and signal detection. Keep previous corpus bytes/labels frozen and use independent adjudication for representative evaluation. All seven hard gates plus documented weighted >=9/10 and explicit owner authorization are mandatory.
+
+## Block 09.5
+See [PHYSICAL-ACCEPTANCE.md](PHYSICAL-ACCEPTANCE.md). No repeated native startup in previously blocked environment; no native pass credited. Structural fixes use expanded email local-part class, explicit contextual labels, valid whole-JSON scalar tokenization preserving scalar replacement as a JSON string, and asserted rather than merely mentioned authority. JSON support remains bounded, not arbitrary structured DLP; output type intentionally changes for redacted numeric/boolean credentials. Educational warnings remain conservative.

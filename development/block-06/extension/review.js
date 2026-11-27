@@ -4,8 +4,10 @@ function makeReview(privacyApi){
  "use strict";
  const LIMIT=12000;
  const rules=[
+ ["instruction_override",/\b(?:regras|instrucoes|diretrizes|politicas|rules|instructions|policies|constraints)\s+(?:(?:anteriores|previous|prior)\s+)?(?:foram|estao|were|are|have been)\s+(?:revogad[ao]s?|anulad[ao]s?|cancelad[ao]s?|revoked|rescinded|cancelled|superseded)\b/i],
+ ["authority_claim",/\b(?:decisao|ordem|instrucao|decision|order|instruction)\s+(?:deste|desta|desse|dessa|of this|from this)\s+(?:arquivo|documento|nota|mensagem|file|document|note|message)\s+(?:e|is)\s+(?:soberan[ao]|suprem[ao]|final|supreme|binding)\b/i],
  ["instruction_override",/\b(?:documento|mensagem|nota|instrucao|document|message|note|instruction)\b.{0,55}\b(?:prevalece|tem prioridade|takes precedence|has priority)\b.{0,65}\b(?:anteriores|demais|prior|previous|others|all other)\b/is],
- ["authority_claim",/\b(?:documento|mensagem|nota|document|message|note)\b.{0,45}\b(?:autoridade final|final authority|sole authority)\b/is],
+ ["authority_claim",/\b(?:documento|mensagem|nota|arquivo|document|message|note|file)\b[ \t]+(?:e|is|constitui|constitutes|representa|represents)[ \t]+(?:(?:a|the|uma|an?)\s+)?(?:autoridade final|final authority|sole authority|autoridade exclusiva)\b/i],
  ["instruction_override",/\b(?:treat|regard|consider)\b.{0,65}\b(?:as the|as your)\b.{0,35}\b(?:governing|highest priority|authoritative)\b.{0,35}\b(?:policy|instructions?|rules?)\b/is],
  ["instruction_override",/\b(?:previous|prior|earlier)\s+(?:constraints|rules|instructions|policies)\s+(?:no longer apply|are no longer valid)\b/i],
  ["instruction_override",/\b(?:document|documento|mensagem|message)\b.{0,40}\b(?:supersedes|substitui|replaces)\b.{0,55}\b(?:instructions?|rules?|diretrizes|instrucoes|regras)\b/is],

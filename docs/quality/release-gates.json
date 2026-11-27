@@ -121,5 +121,12 @@
   "releaseAuthorized": false,
   "originalZipBlob": "af5ec6c2df362ac3018cd00afd60b1dc87ccfdc1",
   "originalZipSha256": "3248c6c204b5651a9f63c5630547e1a18f021a0ffdc08feaba1566e7925fb8b1",
-  "main": "a7a68a59b30dd7cb52eac8b531aa76158fb1377e"
+  "main": "a7a68a59b30dd7cb52eac8b531aa76158fb1377e",
+  "remediation": {
+    "stage": "09.5",
+    "status": "awaiting_ci_and_independent_review",
+    "priorEvidencePreserved": true,
+    "physicalProtocol": "PHYSICAL-ACCEPTANCE.md",
+    "nativeRetry": "deferred_previously_blocked_environment"
+  }
 }
