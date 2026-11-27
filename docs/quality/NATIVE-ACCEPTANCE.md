@@ -16,3 +16,6 @@ See [release-gates.json](release-gates.json) and [block-09-4-evidence.md](block-
 
 ## Block 09.5
 See [PHYSICAL-ACCEPTANCE.md](PHYSICAL-ACCEPTANCE.md). No repeated native startup in previously blocked environment; no native pass credited. Structural fixes use expanded email local-part class, explicit contextual labels, valid whole-JSON scalar tokenization preserving scalar replacement as a JSON string, and asserted rather than merely mentioned authority. JSON support remains bounded, not arbitrary structured DLP; output type intentionally changes for redacted numeric/boolean credentials. Educational warnings remain conservative.
+
+## Block 09.6
+Independent review handoff: [INDEPENDENT-EVALUATION.md](INDEPENDENT-EVALUATION.md). No native retry in blocked environment. Whole valid JSON credential containers are replaced as complete values, including arrays/objects; type changes intentionally, overlapping generic hits are not applied inside protected structured spans. Not a general JSON sanitizer. Quoted email local-part support is heuristic. Historical revocation exception limited to whole trusted-user statement with no action; external content and other signals remain reviewed. No new installation authorization.

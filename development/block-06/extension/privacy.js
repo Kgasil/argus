@@ -14,6 +14,7 @@ function makePrivacy(){
     ["person_name",/\b(?:nome(?: completo| pessoal| fict[ií]cio)?|pessoa (?:fict[ií]cia|identificada)|full name|personal name|synthetic person)[ \t]*:[ \t]*([^\s;][^\r\n;]*)/gdi,1],
     ["address",/\b(?:endere[cç]o(?: residencial| fict[ií]cio)?|home address|residential address)[ \t]*:[ \t]*([^\r\n;]{3,})/gdi,1],
     ["credential",/\b(?:senha|password|passwd|pwd)[ \t]+(?:é|is)[ \t]+(?:"(?:\\.|[^"\\\r\n])+"|\'(?:\\.|[^\'\\\r\n])+\'|[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)+)/gi],
+    ["email",/"(?:\\[^\r\n]|[^"\\\r\n])*"@[\p{L}\p{M}\p{N}.-]+\.[\p{L}\p{M}]{2,}(?![\p{L}\p{M}\p{N}-])/giu],
     ["email",/(?<![\p{L}\p{M}\p{N}.!#$%&'*+/=?^_`{|}~-])[\p{L}\p{M}\p{N}.!#$%&'*+/=?^_`{|}~-]+[ \t]*(?:\[at\]|\(at\))[ \t]*[\p{L}\p{M}\p{N}-]+(?:[ \t]*(?:\[dot\]|\(dot\))[ \t]*[\p{L}\p{M}\p{N}-]+)+(?![\p{L}\p{M}\p{N}-])/giu],
     ["email",/(?<![\p{L}\p{M}\p{N}.!#$%&'*+/=?^_`{|}~-])[\p{L}\p{M}\p{N}.!#$%&'*+/=?^_`{|}~-]+@[\p{L}\p{M}\p{N}.-]+\.[\p{L}\p{M}]{2,}(?![\p{L}\p{M}\p{N}-])/giu],
     ["cnpj",/\b\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}\b/g],
@@ -34,24 +35,34 @@ function makePrivacy(){
  try{JSON.parse(value);}catch{return hits;}
  const tokens=[...value.matchAll(/"(?:\\.|[^"\\])*"|-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?|true|false|null|[{}\[\]:,]/g)];
  const keyPattern=/^(?:senha|password|passwd|pwd|api[ _-]?key|access[ _-]?token|refresh[ _-]?token|client[ _-]?secret|token|secret|código de acesso|codigo de acesso|código de autenticação|codigo de autenticacao|access code|authentication code|passcode|temporary password|senha temporária|senha provisória)$/i;
+ const ends=new Map(),stack=[];
+ for(let i=0;i<tokens.length;i++){
+  const t=tokens[i][0];
+  if(t==="{"||t==="[")stack.push(i);
+  else if(t==="}"||t==="]")ends.set(stack.pop(),i);
+ }
  for(let i=0;i+2<tokens.length;i++){
   const k=tokens[i],v=tokens[i+2];
   if(!k[0].startsWith('"')||tokens[i+1][0]!==":"||!keyPattern.test(JSON.parse(k[0])))continue;
-  if(!/^(?:"|-?\d|true$|false$)/.test(v[0])||v[0]==='""')continue;
-  hits.push({start:v.index,end:v.index+v[0].length,kind:"credential",priority:-1,replacement:'"[CREDENCIAL]"'});
+  const container=v[0]==="{"||v[0]==="[";
+  if(!container&&(!/^(?:"|-?\d|true$|false$)/.test(v[0])||v[0]==='""'))continue;
+  const endIndex=container?ends.get(i+2):i+2;
+  const last=tokens[endIndex];
+  hits.push({start:v.index,end:last.index+last[0].length,kind:"credential",priority:-1,replacement:'"[CREDENCIAL]"'});
+  if(container)i=endIndex;
  }
  return hits;
 }
   function privacy(value){
     if(typeof value!=="string")throw new TypeError("Texto inválido.");
     if(value.length>LIMIT)throw new RangeError("Limite de 12.000 caracteres.");
-    const hits=jsonSecretHits(value);
+    const structured=jsonSecretHits(value),hits=[...structured];
     rules.forEach(([kind,re,group],priority)=>{
       for(const m of value.matchAll(re)){
         if(kind==="card"&&!luhn(m[0]))continue;
         if(kind==="cpf"&&/^\d{11}$/.test(m[0])&&!cpfValid(m[0])&&/\b(?:pedido(?: interno)?|numero do pedido|número do pedido|order(?: id| number)?)[ \t]*[:#]?[ \t]*$/i.test(value.slice(Math.max(0,m.index-80),m.index)))continue;
         const [start,end]=group?m.indices[group]:[m.index,m.index+m[0].length];
-        if(start===end)continue;
+        if(start===end||structured.some(h=>start<h.end&&end>h.start))continue;
         hits.push({start,end,kind,priority});
       }
     });

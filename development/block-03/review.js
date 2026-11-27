@@ -3,8 +3,11 @@
 function makeReview(privacyApi){
  "use strict";
  const LIMIT=12000;
+ const revocation=/\b(?:regras|instrucoes|diretrizes|politicas|rules|instructions|policies|constraints)\s+(?:(?:anteriores|previous|prior)\s+)?(?:foram|estao|were|are|have been)\s+(?:revogad[ao]s?|anulad[ao]s?|cancelad[ao]s?|revoked|rescinded|cancelled|superseded)\b/i;
+ const historical=/^(?:(?:as|os|the)\s+)?(?:regras|instrucoes|diretrizes|politicas|rules|instructions|policies|constraints)\s+(?:foram|were)\s+(?:revogad[ao]s?|anulad[ao]s?|cancelad[ao]s?|revoked|rescinded|cancelled)\s+(?:(?:no|na|in the|under the)\s+(?:regulamento|politica|documento|regulation|policy|document)\s+(?:antig[oa]|anterior)|(?:in the|under the)\s+(?:old|former|historical)\s+(?:regulation|policy|document))\.?$/i;
  const rules=[
- ["instruction_override",/\b(?:regras|instrucoes|diretrizes|politicas|rules|instructions|policies|constraints)\s+(?:(?:anteriores|previous|prior)\s+)?(?:foram|estao|were|are|have been)\s+(?:revogad[ao]s?|anulad[ao]s?|cancelad[ao]s?|revoked|rescinded|cancelled|superseded)\b/i],
+ ["instruction_override",/\b(?:everything|all (?:content|instructions|rules)|tudo|todas as (?:instrucoes|regras))\s+(?:above|before|acima|anteriormente)\s+(?:(?:should|must|shall)\s+be\s+(?:treated|regarded|considered)\s+(?:as\s+)?|(?:deve|devem)\s+ser\s+(?:tratad[oa]s?|considerad[oa]s?)\s+como\s+)(?:obsolete|invalid|superseded|obsolet[oa]s?|invalid[oa]s?|superad[oa]s?)\b/i],
+
  ["authority_claim",/\b(?:decisao|ordem|instrucao|decision|order|instruction)\s+(?:deste|desta|desse|dessa|of this|from this)\s+(?:arquivo|documento|nota|mensagem|file|document|note|message)\s+(?:e|is)\s+(?:soberan[ao]|suprem[ao]|final|supreme|binding)\b/i],
  ["instruction_override",/\b(?:documento|mensagem|nota|instrucao|document|message|note|instruction)\b.{0,55}\b(?:prevalece|tem prioridade|takes precedence|has priority)\b.{0,65}\b(?:anteriores|demais|prior|previous|others|all other)\b/is],
  ["authority_claim",/\b(?:documento|mensagem|nota|arquivo|document|message|note|file)\b[ \t]+(?:e|is|constitui|constitutes|representa|represents)[ \t]+(?:(?:a|the|uma|an?)\s+)?(?:autoridade final|final authority|sole authority|autoridade exclusiva)\b/i],
@@ -35,6 +38,7 @@ function makeReview(privacyApi){
   const text=normalize(value);
   if(text.length>LIMIT*4)throw new RangeError("Texto normalizado excede o limite.");
   const signals=[...new Set(rules.filter(([,re])=>re.test(text)).map(([kind])=>kind))];
+  if(revocation.test(text)&&!(source==="user"&&action==="none"&&historical.test(text))&&!signals.includes("instruction_override"))signals.push("instruction_override");
   const sensitive=privacyApi.privacy(value).total;
   if(sensitive)signals.push("sensitive_pattern");
   const has=k=>signals.includes(k);
