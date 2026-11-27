@@ -1,0 +1,24 @@
+name: Argus Block 02 development validation
+on:
+  push:
+    branches:
+      - development/argus-block-02-data-protection
+    paths:
+      - 'development/block-02/**'
+      - '.github/workflows/argus-block-02.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --version
+      - run: node --check development/block-02/privacy.js
+      - run: node tests/mini.test.js
+      - run: python3 tests/verify_mini_package.py
+      - run: node development/block-02/privacy.test.js
