@@ -4,6 +4,8 @@ function makeReview(privacyApi){
  "use strict";
  const LIMIT=12000;
  const rules=[
+ ["instruction_override",/\b(?:documento|mensagem|nota|instrucao|document|message|note|instruction)\b.{0,55}\b(?:prevalece|tem prioridade|takes precedence|has priority)\b.{0,65}\b(?:anteriores|demais|prior|previous|others|all other)\b/is],
+ ["authority_claim",/\b(?:documento|mensagem|nota|document|message|note)\b.{0,45}\b(?:autoridade final|final authority|sole authority)\b/is],
  ["instruction_override",/\b(?:treat|regard|consider)\b.{0,65}\b(?:as the|as your)\b.{0,35}\b(?:governing|highest priority|authoritative)\b.{0,35}\b(?:policy|instructions?|rules?)\b/is],
  ["instruction_override",/\b(?:previous|prior|earlier)\s+(?:constraints|rules|instructions|policies)\s+(?:no longer apply|are no longer valid)\b/i],
  ["instruction_override",/\b(?:document|documento|mensagem|message)\b.{0,40}\b(?:supersedes|substitui|replaces)\b.{0,55}\b(?:instructions?|rules?|diretrizes|instrucoes|regras)\b/is],

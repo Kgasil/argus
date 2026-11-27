@@ -1,0 +1,95 @@
+{
+  "description": "Known defect regression: exact output, not independent efficacy.",
+  "cases": [
+    [
+      "m01",
+      "Contato: usuário@example.invalid",
+      "Contato: [EMAIL]"
+    ],
+    [
+      "m02",
+      "Contact: élève@exämple.invalid!",
+      "Contact: [EMAIL]!"
+    ],
+    [
+      "m03",
+      "Contato: usuário@example.invalid",
+      "Contato: [EMAIL]"
+    ],
+    [
+      "m04",
+      "+álfa [at] exemplo [dot] invalid",
+      "[EMAIL]"
+    ],
+    [
+      "m05",
+      "Nome pessoal: Pessoa Modelo",
+      "Nome pessoal: [NOME]"
+    ],
+    [
+      "m06",
+      "Senha temporária: fixture123",
+      "[CREDENCIAL]"
+    ],
+    [
+      "m07",
+      "Temporary password: synthetic123",
+      "[CREDENCIAL]"
+    ],
+    [
+      "m08",
+      "Nome completo: Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo Pessoa Modelo",
+      "Nome completo: [NOME]"
+    ],
+    [
+      "m09",
+      "Home address: Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia Avenida Fictícia",
+      "Home address: [ENDERECO]"
+    ],
+    [
+      "m10",
+      "Nome pessoal: Pessoa Modelo; user@example.invalid",
+      "Nome pessoal: [NOME]; [EMAIL]"
+    ],
+    [
+      "m11",
+      "Order ID: 52998224725",
+      "Order ID: [CPF]"
+    ],
+    [
+      "m12",
+      "Order ID: 98765432109",
+      "Order ID: 98765432109"
+    ],
+    [
+      "m13",
+      "Nome da empresa: Empresa Modelo",
+      "Nome da empresa: Empresa Modelo"
+    ],
+    [
+      "m14",
+      "Endereço do site: página inicial",
+      "Endereço do site: página inicial"
+    ],
+    [
+      "m15",
+      "O termo senha temporária deve ser definido.",
+      "O termo senha temporária deve ser definido."
+    ],
+    [
+      "m16",
+      "{ \"password\": \"fixture phrase\" }",
+      "{ \"password\": \"[CREDENCIAL]\" }"
+    ],
+    [
+      "m17",
+      "a@example.invalid; b@example.invalid",
+      "[EMAIL]; [EMAIL]"
+    ],
+    [
+      "m18",
+      "Nome pessoal: Pessoa Modelo\nEndereço: Rua Fictícia, 42",
+      "Nome pessoal: [NOME]\nEndereço: [ENDERECO]"
+    ]
+  ]
+}
