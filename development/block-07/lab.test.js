@@ -1,0 +1,27 @@
+"use strict";
+const assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path"),api=require("./lab.js");let n=0;function test(name,f){f();n++;console.log("OK "+name);}
+const cases=[["mask","detected"],["prompt","block_recommended"],["permission","block_recommended"],["match","compatible"],["conflict","contradiction"],["unsupported","unsupported"],["text","text_only"]];
+test("seven unique scenarios",()=>{assert.equal(api.list().length,7);assert.equal(new Set(api.list().map(x=>x.id)).size,7);});
+for(const [id,expected] of cases)test("observed "+id,()=>{const r=api.createLab().run(id,expected);assert.equal(r.observed,expected);assert.equal(r.fixtureConsistent,true);assert.equal(r.predictionCorrect,true);assert.equal(r.summary.humanReview,true);});
+test("prediction is not substituted for actual result",()=>{const r=api.createLab().run("conflict","compatible");assert.equal(r.predictionCorrect,false);assert.equal(r.observed,"contradiction");});
+test("masked synthetic preview",()=>assert.equal(api.createLab().run("mask","detected").preview,"Contato fictício: [EMAIL]; CPF [CPF]"));
+test("fixture copy detached",()=>{const s=api.scenario("mask");s.choices[0][0]="other";assert.equal(api.scenario("mask").choices[0][0],"none");});
+test("expected answer not in scenario metadata",()=>assert.equal("expected" in api.scenario("mask"),false));
+test("unknown scenario",()=>assert.throws(()=>api.createLab().run("bad","none")));
+test("invalid prediction",()=>assert.throws(()=>api.createLab().run("mask","invalid")));
+test("invalid export option",()=>assert.throws(()=>api.createLab().run("mask","detected","yes")));
+test("default export blocked",()=>{const l=api.createLab();l.run("mask","detected");assert.throws(()=>l.exportReport(true));});
+test("confirmation required",()=>{const l=api.createLab();l.run("mask","detected",true);assert.throws(()=>l.exportReport(false));});
+test("minimized report",()=>{const l=api.createLab();l.run("mask","detected",true);const raw=l.exportReport(true);assert.equal(JSON.parse(raw).summary.total,2);assert.ok(!raw.includes("example.invalid")&&!raw.includes("123.456")&&!raw.includes("preview"));});
+test("assurance export excludes identifiers",()=>{const l=api.createLab();l.run("match","compatible",true);assert.equal(JSON.parse(l.exportReport(true)).summary.factualVerification,false);assert.ok(!l.exportReport(true).includes("Projeto fictício"));});
+test("clear removes report",()=>{const l=api.createLab();l.run("mask","detected",true);l.clear();assert.throws(()=>l.exportReport(true));});
+test("failed run removes stale report",()=>{const l=api.createLab();l.run("mask","detected",true);assert.throws(()=>l.run("mask","invalid"));assert.throws(()=>l.exportReport(true));});
+test("independent sessions",()=>{const a=api.createLab(),b=api.createLab();a.run("mask","detected",true);assert.throws(()=>b.exportReport(true));});
+test("new run resets permission",()=>{const l=api.createLab();l.run("mask","detected",true);l.run("match","compatible");assert.throws(()=>l.exportReport(true));});
+const html=fs.readFileSync(path.join(__dirname,"mini/index.html"),"utf8"),ui=fs.readFileSync(path.join(__dirname,"mini/ui.js"),"utf8");
+test("local references",()=>assert.ok(!/(?:src|href)=["'](?:https?:|\/\/)/i.test(html)));
+test("CSP denies connections",()=>assert.ok(html.includes("connect-src 'none'")));
+test("canonical brand",()=>assert.ok(html.includes("../../../assets/readme-cover.svg")));
+test("no unsafe HTML assignments",()=>assert.ok(!/\b(?:innerHTML|outerHTML|insertAdjacentHTML)\b/.test(ui)));
+test("no persistence or transport API",()=>{for(const p of ["lab.js","mini/ui.js"])assert.ok(!/\b(?:fetch\s*\(|XMLHttpRequest|WebSocket|sendBeacon|localStorage|sessionStorage|indexedDB)\b/.test(fs.readFileSync(path.join(__dirname,p),"utf8")));});
+console.log(n+" mini lab functional cases passed");
