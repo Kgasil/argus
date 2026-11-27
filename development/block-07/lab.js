@@ -1,6 +1,6 @@
 /* Argus Block 07 — synthetic educational scenarios only. */
 (function(root){
-function makeLab(sessionApi){
+function makeLab(sessionApi,i18n){
  "use strict";
  const fact={subject:"Projeto fictício",predicate:"prazo",scope:"novembro de 2026",unit:"dias",value:15};
  const claim=(id="c1",text)=>({id,fact:{...fact},exclusive:true,...(text?{text}:{})});
@@ -15,13 +15,14 @@ function makeLab(sessionApi){
  ];
  function get(id){const f=fixtures.find(x=>x.id===id);if(!f)throw new Error("Unknown scenario.");return f;}
  const clone=x=>JSON.parse(JSON.stringify(x));
- function list(){return fixtures.map(({id,title,operation})=>({id,title,operation}));}
- function scenario(id){const {title,operation,prompt,question,choices}=get(id);return clone({id,title,operation,prompt,question,choices});}
+ function localized(id,lang="pt-BR"){const f=clone(get(id));const t=s=>i18n.translate(lang,s);for(const k of ["title","prompt","question","lesson"])f[k]=t(f[k]);f.choices=f.choices.map(([v,l])=>[v,t(l)]);if(f.input)for(const x of [...f.input.claims,...f.input.references])if(x.text)x.text=t(x.text);return f;}
+ function list(lang="pt-BR"){return fixtures.map(({id})=>{const {title,operation}=localized(id,lang);return {id,title,operation};});}
+ function scenario(id,lang="pt-BR"){const {title,operation,prompt,question,choices}=localized(id,lang);return clone({id,title,operation,prompt,question,choices});}
  function createLab(){
  let session=null;
  function clear(){if(session)session.close();session=null;}
- function run(id,prediction,allowExport=false){
-  clear();const f=get(id);
+ function run(id,prediction,allowExport=false,lang="pt-BR"){
+  clear();const f=localized(id,lang);
   if(typeof allowExport!=="boolean"||!f.choices.some(([v])=>v===prediction))throw new Error("Invalid selection.");
   session=sessionApi.createSession({operations:[f.operation],allowExport});
   try{
@@ -41,5 +42,7 @@ function makeLab(sessionApi){
 const common=typeof module!=="undefined"&&module.exports;
 const session=common?require("../block-05/session.js"):root.ArgusPrivateSession;
 if(!session)throw new Error("Argus session engine required.");
-const api=makeLab(session);if(common)module.exports=api;else root.ArgusMiniLab=api;
+const i18n=common?require("../block-08/i18n.js"):root.ArgusI18n;
+if(!i18n)throw new Error("Argus translations required.");
+const api=makeLab(session,i18n);if(common)module.exports=api;else root.ArgusMiniLab=api;
 })(typeof globalThis!=="undefined"?globalThis:this);
