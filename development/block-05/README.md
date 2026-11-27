@@ -1,0 +1,15 @@
+# Argus Block 05 — Privacy by Design / privacidade por padrão
+Date: 2026-11-27. Development-only baseline a04f7db76212b4087dc1e706f25cb47781a84fbc. No production integration, packaging, deployment or release. Incident #1 remains open.
+
+## Contract / Contrato
+createSession({operations?: ("mask"|"review"|"assess")[], allowExport?: boolean}). All three local processing capabilities enabled by default; the trusted caller may restrict them, including to an empty list. Export disabled by default. These are logical capability switches, not browser permissions, identity verification or a security sandbox. Caller must be trusted and implement independent access controls. No remote execution or storage API is provided.
+
+- mask(text, {includeMaskedText?: boolean}) returns minimized summary only unless the caller explicitly requests a masked preview. Preview is not retained in the session; it may still contain sensitive data, including unsupported identifiers. Never treat it as anonymous.
+- review(text, context) and assess(input) delegate to prior engines; retain and return only whitelisted categories, counts and recommendations. No original text, claim/reference IDs or authorization metadata in summaries. Counts are still potentially sensitive metadata.
+- getSummary() returns a copy of at most one latest report. New processing attempts discard previous report, including failed/disabled operations. clear() discards state; close() discards state and permanently disables that session. Independent session closures share no report state.
+- exportSummary({confirmed:true}) returns only schema-tagged JSON of latest minimized report, requires enabled export and explicit confirmation on every call. No file write, clipboard access, network, persistence, or automatic transfer. UI must obtain real user confirmation and review before copying/downloading; caller-supplied boolean alone is not proof of consent.
+- No raw content is retained by this session module. JavaScript strings, caller references, returned previews, exported copies, browser/OS memory, extensions and crash dumps cannot be securely erased or controlled by this API. No promise of physical erasure, process isolation, anonymity, or compliance certification. No persistence in this module does not establish whole-app nonpersistence.
+- PT: estado efêmero, relatório minimizado e exportação desativada por padrão. Descarte lógico, não apagamento seguro de memória. Isolamento entre sessões é lógico, não sandbox. Use dados fictícios; revise antes de compartilhar. Sem garantia de anonimização ou LGPD certificada. Interface pública ainda não integrada.
+
+## Validation / Validação
+Run node development/block-05/session.test.js (52 cases), Block 02/03/04 suites, original tests and package verifier. New tests executed in isolated JS runtime before commit; actual CI logs must be checked. Browser storage, network instrumentation, permission integration, native scans and independent efficacy benchmark remain pending. Original ZIP unchanged. Overall quality gate >=9/10 remains pending.
