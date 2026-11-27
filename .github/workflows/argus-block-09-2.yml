@@ -48,3 +48,4 @@ jobs:
       - run: node development/block-09/performance.test.js
       - run: node development/block-09/privacy-browser.test.js
       - run: node development/block-09-2/refinement.test.js
+      - run: node development/block-09-2/native.test.js

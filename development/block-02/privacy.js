@@ -25,6 +25,7 @@ function makePrivacy(){
     const d=s.replace(/\D/g,""); if(d.length<13||d.length>19||/^(\d)\1+$/.test(d))return false;
     let sum=0;for(let i=d.length-1,j=0;i>=0;i--,j++){let x=Number(d[i]);if(j%2){x*=2;if(x>9)x-=9;}sum+=x;}return sum%10===0;
   }
+  function cpfValid(d){if(!/^\d{11}$/.test(d)||/^(\d)\1+$/.test(d))return false;for(let len=9;len<=10;len++){let sum=0;for(let i=0;i<len;i++)sum+=Number(d[i])*(len+1-i);const x=(sum*10)%11;if((x===10?0:x)!==Number(d[len]))return false;}return true;}
   function privacy(value){
     if(typeof value!=="string")throw new TypeError("Texto inválido.");
     if(value.length>LIMIT)throw new RangeError("Limite de 12.000 caracteres.");
@@ -32,7 +33,7 @@ function makePrivacy(){
     rules.forEach(([kind,re,group],priority)=>{
       for(const m of value.matchAll(re)){
         if(kind==="card"&&!luhn(m[0]))continue;
-        if(kind==="cpf"&&/^\d{11}$/.test(m[0])&&/\b(?:pedido(?: interno)?|numero do pedido|número do pedido|order(?: id| number)?)[ \t]*[:#]?[ \t]*$/i.test(value.slice(Math.max(0,m.index-80),m.index)))continue;
+        if(kind==="cpf"&&/^\d{11}$/.test(m[0])&&!cpfValid(m[0])&&/\b(?:pedido(?: interno)?|numero do pedido|número do pedido|order(?: id| number)?)[ \t]*[:#]?[ \t]*$/i.test(value.slice(Math.max(0,m.index-80),m.index)))continue;
         const [start,end]=group?m.indices[group]:[m.index,m.index+m[0].length];
         if(start===end)continue;
         hits.push({start,end,kind,priority});
