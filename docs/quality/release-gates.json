@@ -1,0 +1,125 @@
+{
+  "schema": "argus-release-gate-v1",
+  "date": "2026-11-27",
+  "decision": "NO_GO",
+  "testedCommit": "66ad237859121d32c6384e0353b2a6a514923e4e",
+  "baseline": "a3d871dca2f4a628c8ca21afeb6523f741ee0b86",
+  "workflow": 46073286416,
+  "verifiedChecks": 576,
+  "newFunctionalChecks": 0,
+  "globalScore": null,
+  "minimumScore": 9,
+  "dimensions": [
+    {
+      "name": "security",
+      "weight": 25,
+      "score": null,
+      "status": "blocked"
+    },
+    {
+      "name": "privacy",
+      "weight": 20,
+      "score": null,
+      "status": "blocked"
+    },
+    {
+      "name": "ai_reliability",
+      "weight": 20,
+      "score": null,
+      "status": "partial"
+    },
+    {
+      "name": "stability",
+      "weight": 15,
+      "score": null,
+      "status": "partial"
+    },
+    {
+      "name": "design_accessibility",
+      "weight": 10,
+      "score": null,
+      "status": "partial"
+    },
+    {
+      "name": "documentation",
+      "weight": 10,
+      "score": null,
+      "status": "partial"
+    }
+  ],
+  "challenge": {
+    "positive": 16,
+    "exactOutput": 11,
+    "manuallyAdjudicatedCompleteRemoval": 12,
+    "residualSensitiveCases": [
+      "x10",
+      "x12",
+      "x13",
+      "x14"
+    ],
+    "formatOnly": [
+      "x11"
+    ],
+    "privacy": {
+      "tp": 13,
+      "fp": 0,
+      "tn": 8,
+      "fn": 3
+    },
+    "prompt": {
+      "tp": 10,
+      "fp": 2,
+      "tn": 10,
+      "fn": 2
+    }
+  },
+  "gates": [
+    {
+      "id": "G01",
+      "status": "blocked",
+      "owner": "Microsoft and project owner",
+      "evidence": "Vendor verdict linked to exact submitted SHA-256; incident #1 disposition; active endpoint protection scans of exact final candidate. No quarantine bypass."
+    },
+    {
+      "id": "G02",
+      "status": "blocked",
+      "owner": "engineering and independent reviewer",
+      "evidence": "Complete sensitive span removal in supported critical regression cases, separately adjudicated from formatting; no known unresolved high-impact residuals; independently labeled representative corpus, precision and recall >=90% for agreed supported scope."
+    },
+    {
+      "id": "G03",
+      "status": "blocked",
+      "owner": "engineering and independent reviewer",
+      "evidence": "Prompt review precision and recall >=90% on representative held-out corpus with agreed risk labels; authorization enforcement external to heuristic engine."
+    },
+    {
+      "id": "G04",
+      "status": "blocked",
+      "owner": "approved native test environment",
+      "evidence": "Sandbox-enabled isolated Chromium startup, confirmed native MV3 origin and CSP, permissions, workflow, export and storage lifecycle; explicit pass marker, not merely green CI."
+    },
+    {
+      "id": "G05",
+      "status": "pending",
+      "owner": "owner or authorized physical tester",
+      "evidence": "Windows Chrome and Edge acceptance with active Defender after safety clearance, reboot and lifecycle, physical desktop/mobile, keyboard/screen reader, memory and performance."
+    },
+    {
+      "id": "G06",
+      "status": "pending",
+      "owner": "owner and engineering",
+      "evidence": "License decision, CI dependency pinning, branch governance and main reconciliation; documentation consistent, no unresolved distribution warnings."
+    },
+    {
+      "id": "G07",
+      "status": "pending",
+      "owner": "owner",
+      "evidence": "All hard gates resolved, documented weighted score >=9/10 and explicit release authorization for exact final candidate."
+    }
+  ],
+  "hardGatesAllRequired": true,
+  "releaseAuthorized": false,
+  "originalZipBlob": "af5ec6c2df362ac3018cd00afd60b1dc87ccfdc1",
+  "originalZipSha256": "3248c6c204b5651a9f63c5630547e1a18f021a0ffdc08feaba1566e7925fb8b1",
+  "main": "a7a68a59b30dd7cb52eac8b531aa76158fb1377e"
+}
