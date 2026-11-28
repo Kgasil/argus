@@ -38,7 +38,15 @@ Free complementary 0.1.0 samples for visitors to explore basic features. They do
 
 **Validation / Validação:** 23 deterministic rule checks in `tests/mini.test.js`; run `node tests/mini.test.js`. [CI workflow](https://github.com/Kgasil/argus/actions/workflows/mini-validation.yml).
 
-### Instalação da extensão / Extension installation
+## Manutenção e homologação / Maintenance and acceptance — 28/11/2026
+
+**Proteger / Protect · GRAAL.** Laboratório de pesquisa 1.0 público e gratuito; base técnica V10.2 preservada. Argus Mini 0.1.0 web permanece disponível, mas a instalação da extensão está suspensa até parecer definitivo da Microsoft ([incidente #1](https://github.com/Kgasil/argus/issues/1)). Sem confirmação de falso positivo. A estruturação do ecossistema foi encerrada; licença, proteção da branch principal, avaliação independente dos motores, critérios G01–G07 e aceitação física permanecem pendentes. Nenhuma homologação 9/10 ou liberação definitiva é alegada.
+
+Public and free research lab 1.0; technical baseline V10.2 preserved. Argus Mini 0.1.0 web remains available, but extension installation is paused pending Microsoft's final verdict; no false-positive determination. Ecosystem structuring closed; license, main branch protection, independent engine assessment, G01–G07 and physical acceptance remain pending. No 9/10 certification or final clearance claimed.
+
+[Central de distribuição / Distribution center](https://kgasil.github.io/distribuicao.html) · [Registro / Register](https://github.com/Kgasil/kgasil.github.io/blob/main/docs/maintenance-and-acceptance.md)
+
+### Instalação da extensão / Extension installation (suspensa / paused)
 
 > [!WARNING]
 > **AVISO IMPORTANTE DE SEGURANÇA — Argus Mini 0.1.0 (26/11/2026)**
@@ -94,10 +102,10 @@ Abra `index.html` no navegador ou utilize um servidor HTTP estático local. Não
 | --- | --- | --- | --- |
 | K&G Vision | [Institutional](https://kgasil.github.io/) | [Source](https://github.com/Kgasil/kgasil.github.io) | Independent initiative / Iniciativa independente |
 | Project Genesis | [Wisdom & Application / Sabedoria e Aplicação](https://kgasil.github.io/genesis/) | [Source](https://github.com/Kgasil/genesis) | **1.0 — Editorial & Library / Acervo e biblioteca.** 75 private study PDFs; [public interactive library](https://kgasil.github.io/genesis/biblioteca.html) / 75 PDFs privados; biblioteca pública interativa, sem cursos ou certificados. · [Genesis Mini — complemento gratuito](https://kgasil.github.io/genesis/mini/) · [Instalar extensão / Install extension](https://kgasil.github.io/genesis/#instalar-extensao) |
-| Project Rubedo | [Science & Innovation / Ciência e Inovação](https://kgasil.github.io/rubedo/) | [Source](https://github.com/Kgasil/rubedo) | **Marco 01 — Public Lab 1.0.** [Research Workspace 1.0](https://kgasil.github.io/rubedo/research/) · [Mini Lab 1.0.0](https://kgasil.github.io/rubedo/mini/) · [Instalação manual / Manual installation](https://kgasil.github.io/rubedo/#instalar); experimental, no store distribution. |
+| Project Rubedo | [Science & Innovation / Ciência e Inovação](https://kgasil.github.io/rubedo/) | [Source](https://github.com/Kgasil/rubedo) | **Marco 01 — Public Lab 1.0.** [Research Workspace 1.0.1](https://kgasil.github.io/rubedo/research/) · [Mini Lab 1.0.1](https://kgasil.github.io/rubedo/mini/) · [Instalação manual / Manual installation](https://kgasil.github.io/rubedo/#instalar); experimental, no store distribution. |
 | Project Argus | [Security & Development / Segurança e Desenvolvimento](https://kgasil.github.io/argus/) | [Source](https://github.com/Kgasil/argus) | **1.0 — Public Research Lab / Laboratório público.** Technical baseline V10.2; local demonstrations / Base técnica V10.2; demonstrações locais, não serviços de produção. [Argus Mini — amostra complementar / complementary sample](https://kgasil.github.io/argus/mini/), v0.1.0; original milestone unchanged / marco original preservado. · [Instalar extensão / Install extension](https://kgasil.github.io/argus/#instalar-extensao) |
-| Project Aeris | [Efficiency & Simplicity / Eficiência e Simplicidade](https://kgasil.github.io/aeris/) | [Source](https://github.com/Kgasil/aeris) | **1.0 — Extension 1.0.0; Desktop 1.1.0 RC1.** Public experimental preview, not stable / Prévia pública experimental, não estável. [Desktop e extensão — instalação, avisos e evidências / installation, warnings and evidence](https://kgasil.github.io/aeris/#instalacao) |
-| Project Lilium | [Strategy & Evolution / Estratégia e Evolução](https://kgasil.github.io/lilium/) | [Source](https://github.com/Kgasil/lilium) | **1.0 — Web Lab.** Public demo / demonstração pública; Desktop v0.14.0 controlled preview / prévia controlada; [Mini v0.1.1](https://github.com/Kgasil/lilium/tree/main/extension) experimental. |
+| Project Aeris | [Efficiency & Simplicity / Eficiência e Simplicidade](https://kgasil.github.io/aeris/) | [Source](https://github.com/Kgasil/aeris) | **1.0 — Extension 1.0.0; Desktop 1.1.0 RC1.** Historical experimental previews; new candidate blocked / Prévias históricas experimentais; novo candidato bloqueado. [Desktop e extensão — instalação, avisos e evidências / installation, warnings and evidence](https://kgasil.github.io/aeris/#instalacao) |
+| Project Lilium | [Strategy & Evolution / Estratégia e Evolução](https://kgasil.github.io/lilium/) | [Source](https://github.com/Kgasil/lilium) | **1.0 — Web Lab.** Public demo / demonstração pública; Desktop v0.14.0 closed acceptance / homologação fechada; [Mini v0.1.1](https://github.com/Kgasil/lilium/tree/main/extension) experimental. |
 
 **Version note / Nota de versão:** 1.0 identifies the first completed public-facing project milestone of the ecosystem, not a uniform software release tag. Genesis is an editorial milestone; Argus retains technical baseline V10.2; Aeris 1.0.0 applies to Extension; Lilium 1.0 applies to Web Lab. / 1.0 identifica o primeiro marco público do ecossistema, não uma tag de software uniforme. Genesis é um marco editorial; Argus mantém a base V10.2; Aeris 1.0.0 refere-se à extensão; Lilium 1.0 refere-se ao Web Lab. Desktop previews are not stable releases / Prévias Desktop não são versões estáveis.
 
@@ -137,7 +145,7 @@ O escudo institucional preserva as quatro cores laterais e o núcleo branco; Rub
 
 **GRAAL — Construir / Build (Rubedo):** [Rubedo Research Workspace](https://kgasil.github.io/rubedo/research/) · [Precisão / Precision (R06)](https://kgasil.github.io/rubedo/research/#precisao) · [Monte Carlo (R07)](https://kgasil.github.io/rubedo/research/#monte-carlo). Modelos experimentais; CI de integridade e interface registrada em 27/11/2026 ([evidência / evidence](https://github.com/Kgasil/rubedo/actions/runs/46007461543)), sem validação científica ou industrial. / Experimental models; package and interface CI recorded, no scientific or industrial validation.
 
-**Rubedo — edição 1.0 / 1.0 edition:** [Research Workspace 1.0](https://kgasil.github.io/rubedo/research/) · [Mini Lab 1.0.0](https://kgasil.github.io/rubedo/mini/) · [Mini Extension 1.0.0 — instalação manual / manual installation](https://kgasil.github.io/rubedo/#instalar). Edição experimental / Experimental edition.
+**Rubedo — edição 1.0 / 1.0 edition:** [Research Workspace 1.0.1](https://kgasil.github.io/rubedo/research/) · [Mini Lab 1.0.1](https://kgasil.github.io/rubedo/mini/) · [Mini Extension 1.0.1 — instalação manual / manual installation](https://kgasil.github.io/rubedo/#instalar). Edição experimental / Experimental edition.
 
 
 **[Central de distribuição GRAAL / GRAAL distribution center](https://kgasil.github.io/distribuicao.html)** — versões, canais oficiais, limitações e estado de segurança / versions, official channels, limitations and security status.

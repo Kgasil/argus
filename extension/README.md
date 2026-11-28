@@ -1,3 +1,5 @@
+> **Instalação suspensa / Installation paused — 28/11/2026.** Incidente Microsoft [#1](https://github.com/Kgasil/argus/issues/1) aberto. Instruções abaixo são históricas: não baixe, instale ou restaure o pacote enquanto o parecer estiver pendente. / Microsoft incident #1 open. Instructions below are historical: do not download, install or restore the package while the verdict is pending. [Mini Lab web](https://kgasil.github.io/argus/mini/).
+
 # Argus Mini — 0.1.0 (prévia experimental)
 
 Extensão gratuita para navegadores Chromium. Abra a extensão e cole texto fictício para mascarar padrões de e-mail, CPF, CNPJ, telefone e credenciais ou revisar sinais heurísticos de risco em prompts. Não verifica identidade, validade dos documentos, intenção, contexto ou segurança real. Pode gerar falsos positivos e falsos negativos.
